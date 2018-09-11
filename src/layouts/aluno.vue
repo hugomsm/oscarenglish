@@ -2,70 +2,22 @@
   <q-layout> <!-- Be sure to play with the Layout demo on docs -->
 
     <!-- (Optional) The Header -->
-    <q-layout-header>
+    <q-layout-header class='row'>
       <q-toolbar color='white'>
         <q-btn
           flat
           round
           dense
           icon="menu"
-          color='primary'
+          color='indigo-8'
+          size='xl'
           @click="leftDrawer = !leftDrawer"
         />
-        <q-toolbar-title>
-          <img class='-center' alt="Oscar English" src="~assets/oscarenglish.jpg" width="50%" height="50%">
+        <q-toolbar-title class='q-pl-xl'>
+          <img alt="Oscar English" src="~assets/oscarenglish.jpg" width="60%" height="60%">
         </q-toolbar-title>
       </q-toolbar>
-      <q-tabs>
-        <q-route-tab
-          slot="title"
-          icon="map"
-          to="/your/route"
-          replace
-          label="One Tab"
-        />
-        <q-route-tab
-          slot="title"
-          icon="assignment"
-          to="/some/other/route"
-          replace
-          label="Other Tab"
-        />
-      </q-tabs>
     </q-layout-header>
-
-    <!-- (Optional) The Footer -->
-    <q-layout-footer>
-      <q-toolbar>
-        <q-btn
-          flat
-          round
-          dense
-          icon="menu"
-          @click="leftDrawer = !leftDrawer"
-        />
-        <q-toolbar-title>
-          Footer
-          <span slot="subtitle">Subtile</span>
-        </q-toolbar-title>
-      </q-toolbar>
-      <q-tabs>
-        <q-route-tab
-          slot="title"
-          icon="map"
-          to="/your/route"
-          replace
-          label="One Tab"
-        />
-        <q-route-tab
-          slot="title"
-          icon="assignment"
-          to="/some/other/route"
-          replace
-          label="Other Tab"
-        />
-      </q-tabs>
-    </q-layout-footer>
 
     <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->
     <q-layout-drawer
@@ -87,10 +39,8 @@
     </q-layout-drawer>
 
     <q-page-container>
-      <!-- This is where pages get injected -->
       <router-view />
     </q-page-container>
-
   </q-layout>
 </template>
 
@@ -110,4 +60,7 @@ export default {
 </script>
 
 <style>
+.cor-oscarenglish{
+  color: #2C2F91;
+}
 </style>

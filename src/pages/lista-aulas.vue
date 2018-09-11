@@ -1,8 +1,12 @@
 <template>
   <q-page padding>
+  <p class='q-title text-center'>CLASS LIST</p>
             <q-list no-border>
-          <aula-item v-for='aula in aulas' :key='aula.idAula' :aulaSelecionada='aula' class='q-ma-md'>
+          <aula-item v-for='aula in aulas' :key='aula.idAula' :aulaSelecionada='aula' class='q-pa-md'>
           </aula-item>
+          <aula-item :aulaSelecionada='emBreve' class='q-pa-md' disabled=true>
+          </aula-item>
+          </q-list>
   </q-page>
 </template>
 
@@ -14,11 +18,16 @@ export default {
       aulas: [
         {
           idAula: 1,
-          tituloAula: "Verbo To Be",
-          descricao: "Aprenda o verbo To Be",
+          tituloAula: "To Be",
+          descricao: "Learn verb To Be",
           status: 0
         }
-      ]
+      ],
+      emBreve: {
+          idAula: -1,
+          tituloAula: 'Coming Soon',
+          descricao: 'Coming Soon',
+        },
     };
   },
   components: {

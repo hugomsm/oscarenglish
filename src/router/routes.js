@@ -2,7 +2,8 @@ const routes = [
   {
     path: "/",
     component: () => import("layouts/aluno.vue"),
-    children: [{ path: "", component: () => import("pages/lista-aulas.vue") }]
+    children: [{ path: "", component: () => import("pages/lista-aulas.vue") },
+    { path: 'aula1', component: () => import('pages/aula1') }]
   }
 ];
 

@@ -1,15 +1,47 @@
 <template>
-  <div>My component</div>
+  <div>
+  <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' icon='change_history' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
+      <q-card class='bg-white q-pa-md shadow-6'>
+        <q-btn class='cor-oscarenglish text-white shadow-6 q-mb-xs' size=lg @click='navigateToAula'>
+          Começar aula!
+        </q-btn>
+        <hr>
+        <p class=''> {{aulaSelecionada.descricao}} </p>
+      </q-card>
+    </q-collapsible>
+  </div>
 </template>
 
 <script>
 export default {
-  // name: 'ComponentName',
-  data () {
-    return {}
+  props: ["aulaSelecionada"],
+  data() {
+    return {
+      /* eslint-disable global-require */
+      imagem: require("../assets/aula.png")
+    };
+  },
+  methods: {
+    navigateToAula() {
+      const id = this.aulaSelecionada.idAula.toString();
+      const url = `aula${id}`;
+      this.$router.push(`${url}`);
+    }
   }
-}
+};
 </script>
 
 <style>
+.cor-oscarenglish{
+  background: #2C2F91;
+}
+/* .q-item-sublabel {
+  color: black;
+  text-align: center;
+}
+
+.q-item-label {
+  color: black;
+  text-align: center;
+} */
 </style>
