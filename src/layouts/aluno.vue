@@ -3,17 +3,17 @@
 
     <!-- (Optional) The Header -->
     <q-layout-header>
-      <q-toolbar>
+      <q-toolbar color='white'>
         <q-btn
           flat
           round
           dense
           icon="menu"
+          color='primary'
           @click="leftDrawer = !leftDrawer"
         />
         <q-toolbar-title>
-          Header
-          <span slot="subtitle">Subtile</span>
+          <img class='-center' alt="Oscar English" src="~assets/oscarenglish.jpg" width="50%" height="50%">
         </q-toolbar-title>
       </q-toolbar>
       <q-tabs>
@@ -97,7 +97,6 @@
 <script>
 import { openURL } from "quasar";
 export default {
-  // name: 'LayoutName',
   data() {
     return {
       leftDrawer: true

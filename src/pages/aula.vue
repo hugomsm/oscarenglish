@@ -1,13 +1,10 @@
 <template>
   <q-page padding>
-            <q-list no-border>
-          <aula-item v-for='aula in aulas' :key='aula.idAula' :aulaSelecionada='aula' class='q-ma-md'>
-          </aula-item>
+    <!-- content -->
   </q-page>
 </template>
 
 <script>
-import AulaItem from "../components/aula-item.vue";
 export default {
   data() {
     return {
@@ -16,16 +13,15 @@ export default {
           idAula: 1,
           tituloAula: "Verbo To Be",
           descricao: "Aprenda o verbo To Be",
+          video: "https://www.youtube.com/watch?v=VaJ1MUI-Ovw",
+          conteudo: "",
           status: 0
         }
       ]
     };
-  },
-  components: {
-    aulaItem: AulaItem
   }
 };
 </script>
-  
+
 <style>
 </style>
