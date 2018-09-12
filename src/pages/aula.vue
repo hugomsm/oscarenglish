@@ -1,7 +1,7 @@
 <template>
   <q-page padding>
-    {{aula.tituloAula}}
-    <q-video  :src='aula.video'></q-video>
+    {{aulas[$route.params.id-1].tituloAula}}
+    <q-video  :src='aula.video' style="width: 100%; height: 300px"></q-video>
   </q-page>
 </template>
 

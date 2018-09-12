@@ -2,7 +2,7 @@
   <q-page padding>
   <p class='q-title text-center'>CLASS LIST</p>
             <q-list no-border>
-          <aula-item v-for='aula in aulas' :key='aula.idAula' :aulaSelecionada='aula' class='q-pa-md'>
+          <aula-item v-for='aula in aulas' :key='aula.idAula' :disabled='aula.block' :aulaSelecionada='aula' class='q-pa-md'>
           </aula-item>
           <aula-item :aulaSelecionada='emBreve' class='q-pa-md disabled'>
           </aula-item>
@@ -20,21 +20,31 @@ export default {
           idAula: 1,
           tituloAula: "To Be",
           descricao: "Learn verb To Be",
-          status: 0
+          status: 0,
+          block: false
         },
         {
           idAula: 2,
           tituloAula: "Verbo To Be 2",
           descricao: "Aprenda o verbo To Be 2",
-          status: 0
+          status: 0,
+          block: false
         }
       ],
       emBreve: {
         idAula: -1,
         tituloAula: "Coming Soon",
-        descricao: "Coming Soon"
+        descricao: "Coming Soon",
+        block: true
       }
     };
+  },
+  mounted() {
+    for (let i = 1; i < this.aulas.length; i++) {
+      if (this.aulas[i - 1].status != "1") {
+        this.aulas[i].block = true;
+      }
+    }
   },
   components: {
     aulaItem: AulaItem

@@ -5,9 +5,18 @@
 </template>
 
 <script>
+var db = null;
+
+document.addEventListener("deviceready", function() {
+  db = window.sqlitePlugin.openDatabase({
+    name: "oscarenglish.db",
+    location: "default"
+  });
+});
+
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
