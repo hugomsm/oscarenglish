@@ -3,7 +3,7 @@
   <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' icon='change_history' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
       <q-card class='bg-white q-pa-md shadow-6'>
         <q-btn class='cor-oscarenglish text-white shadow-6 q-mb-xs' size=lg @click='navigateToAula'>
-          Começar aula!
+          START CLASS!
         </q-btn>
         <hr>
         <p class=''> {{aulaSelecionada.descricao}} </p>
@@ -24,7 +24,7 @@ export default {
   methods: {
     navigateToAula() {
       const id = this.aulaSelecionada.idAula.toString();
-      const url = `aula${id}`;
+      const url = `aula/${id}`;
       this.$router.push(`${url}`);
     }
   }
@@ -32,16 +32,16 @@ export default {
 </script>
 
 <style>
-.cor-oscarenglish{
-  background: #2C2F91;
+.cor-oscarenglish {
+  background: #2c2f91;
 }
-/* .q-item-sublabel {
+.q-item-sublabel scoped {
   color: black;
   text-align: center;
 }
 
-.q-item-label {
+.q-item-label scoped {
   color: black;
   text-align: center;
-} */
+}
 </style>

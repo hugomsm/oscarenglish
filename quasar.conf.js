@@ -24,8 +24,7 @@ module.exports = function (ctx) {
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
-      extendWebpack (cfg) {
-      }
+      extendWebpack(cfg) {}
     },
     devServer: {
       // https: true,
@@ -35,7 +34,7 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
-           'QLayout',
+        'QLayout',
         'QLayoutHeader',
         'QLayoutDrawer',
         'QPageContainer',
@@ -58,7 +57,8 @@ module.exports = function (ctx) {
         'QCarouselControl',
         'QField',
         'QInput',
-        'QVideo'
+        'QVideo',
+        'QScrollArea'
       ],
       directives: [
         'Ripple'
@@ -86,8 +86,7 @@ module.exports = function (ctx) {
         orientation: 'portrait',
         background_color: '#ffffff',
         theme_color: '#027be3',
-        icons: [
-          {
+        icons: [{
             'src': 'statics/icons/icon-128x128.png',
             'sizes': '128x128',
             'type': 'image/png'
@@ -120,7 +119,7 @@ module.exports = function (ctx) {
     },
     electron: {
       // bundler: 'builder', // or 'packager'
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         // do something with Electron process Webpack cfg
       },
       packager: {

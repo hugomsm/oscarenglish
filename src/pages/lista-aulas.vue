@@ -4,7 +4,7 @@
             <q-list no-border>
           <aula-item v-for='aula in aulas' :key='aula.idAula' :aulaSelecionada='aula' class='q-pa-md'>
           </aula-item>
-          <aula-item :aulaSelecionada='emBreve' class='q-pa-md' disabled=true>
+          <aula-item :aulaSelecionada='emBreve' class='q-pa-md disabled'>
           </aula-item>
           </q-list>
   </q-page>
@@ -21,13 +21,19 @@ export default {
           tituloAula: "To Be",
           descricao: "Learn verb To Be",
           status: 0
+        },
+        {
+          idAula: 2,
+          tituloAula: "Verbo To Be 2",
+          descricao: "Aprenda o verbo To Be 2",
+          status: 0
         }
       ],
       emBreve: {
-          idAula: -1,
-          tituloAula: 'Coming Soon',
-          descricao: 'Coming Soon',
-        },
+        idAula: -1,
+        tituloAula: "Coming Soon",
+        descricao: "Coming Soon"
+      }
     };
   },
   components: {

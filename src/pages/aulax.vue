@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <q-video :src='aulas[0].video'></q-video>
+    <q-video  :src='aulas[0].video'></q-video>
   </q-page>
 </template>
 

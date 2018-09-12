@@ -26,14 +26,10 @@
     >
       <!-- QScrollArea is optional -->
       <q-scroll-area class="fit q-pa-sm">
-        <q-list-header>Essential Links</q-list-header>
-        <q-item @click.native="openURL('http://quasar-framework.org')">
-          <q-item-side icon="school" />
-          <q-item-main label="Docs" sublabel="quasar-framework.org" />
-        </q-item>
-        <q-item @click.native="openURL('https://github.com/quasarframework/')">
-          <q-item-side icon="code" />
-          <q-item-main label="GitHub" sublabel="github.com/quasarframework" />
+        <q-list-header>Navegation</q-list-header>
+        <q-item to='/'>
+          <q-item-side icon="home" />
+          <q-item-main label="Home" sublabel="Back to home" />
         </q-item>
       </q-scroll-area>
     </q-layout-drawer>
@@ -60,7 +56,7 @@ export default {
 </script>
 
 <style>
-.cor-oscarenglish{
-  color: #2C2F91;
+.cor-oscarenglish {
+  color: #2c2f91;
 }
 </style>
