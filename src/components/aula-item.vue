@@ -24,7 +24,7 @@ export default {
   methods: {
     navigateToAula() {
       const id = this.aulaSelecionada.idAula.toString();
-      const url = `aula/${id}`;
+      const url = `class/${id}`;
       this.$router.push(`${url}`);
     }
   }

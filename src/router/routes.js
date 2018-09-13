@@ -8,9 +8,9 @@ const routes = [{
         import("pages/lista-aulas.vue")
     },
     {
-      path: '/aula/:id',
+      path: '/class/:id',
       component: () =>
-        import('pages/aula')
+        import('pages/class')
     }
   ]
 }];
