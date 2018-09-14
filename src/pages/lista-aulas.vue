@@ -35,6 +35,7 @@ export default {
         idAula: -1,
         tituloAula: "Coming Soon",
         descricao: "Coming Soon",
+        status: 0,
         block: true
       }
     };
@@ -53,4 +54,10 @@ export default {
 </script>
   
 <style>
+.q-icon {
+  color: #2c2f91;
+}
+p {
+  color: #2c2f91;
+}
 </style>

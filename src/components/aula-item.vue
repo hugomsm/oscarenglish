@@ -1,6 +1,6 @@
 <template>
   <div>
-  <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' icon='change_history' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
+  <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' :icon='icone()' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
       <q-card class='bg-white q-pa-md shadow-6'>
         <q-btn class='cor-oscarenglish text-white shadow-6 q-mb-xs' size=lg @click='navigateToAula'>
           START CLASS!
@@ -17,6 +17,13 @@ export default {
   props: ["aulaSelecionada"],
   data() {
     return {
+      icone: function() {
+        if (this.aulaSelecionada.status === 1) {
+          return "done_outline";
+        } else if (this.aulaSelecionada.status === 0) {
+          return "change_history";
+        }
+      },
       /* eslint-disable global-require */
       imagem: require("../assets/aula.png")
     };

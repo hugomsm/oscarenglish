@@ -1,7 +1,11 @@
 <template>
   <q-page padding>
-    {{aulas[$route.params.id-1].tituloAula}}
+    <p class='q-title text-center'>{{aulas[$route.params.id-1].tituloAula}}</p>
     <q-video  :src='aula.video' style="width: 100%; height: 300px"></q-video>
+    <div>
+      <br>
+    <q-btn class='cor-oscarenglish text-white'>Marcar como concluído</q-btn>
+    </div>
   </q-page>
 </template>
 
