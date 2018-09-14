@@ -40,6 +40,11 @@ export default {
       }
     };
   },
+
+  created() {
+    // chamar os dados do Back e jogar no localstorage
+    // this.aulas = $q.get()
+  },
   mounted() {
     for (let i = 1; i < this.aulas.length; i++) {
       if (this.aulas[i - 1].status != "1") {
