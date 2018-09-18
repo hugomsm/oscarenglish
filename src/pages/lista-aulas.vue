@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-  <p class='q-title text-center'>CLASS LIST</p>
+  <p class='q-title text-center'>LISTA DE ASSUNTOS</p>
             <q-list no-border>
           <aula-item v-for='aula in aulas' :key='aula.idAula' :disabled='aula.block' :aulaSelecionada='aula' class='q-pa-md'>
           </aula-item>
@@ -18,8 +18,8 @@ export default {
       aulas: [
         {
           idAula: 1,
-          tituloAula: "To Be",
-          descricao: "Learn verb To Be",
+          tituloAula: "O que é o verbo To Be?",
+          descricao: "Aprenda o que é e como conjugar",
           status: 0,
           block: false
         },
