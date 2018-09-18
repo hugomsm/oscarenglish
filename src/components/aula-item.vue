@@ -1,6 +1,6 @@
 <template>
   <div>
-  <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' image='assets/icone-aula-oscar.png' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
+  <q-collapsible group='aulas' class='bg-grey-2 q-title text-center shadow-6' header-class='q-title' :image='imagem' :label='aulaSelecionada.tituloAula' :sublabel='aulaSelecionada.descricao'>
       <q-card class='bg-white q-pa-md shadow-6'>
         <q-btn class='cor-oscarenglish text-white shadow-6 q-mb-xs' size=lg @click='navigateToAula'>
           COMEÇAR AULA
@@ -26,7 +26,7 @@ export default {
       // },
 
       /* eslint-disable global-require */
-      imagem: require("../assets/aula.png")
+      imagem: require("../assets/icone-aula-oscar.png")
     };
   },
   methods: {
